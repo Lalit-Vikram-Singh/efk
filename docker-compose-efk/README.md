@@ -1,6 +1,6 @@
 Docker compose file for setting up a EFK service
 ================================================
-
+sudo sysctl -w vm.max_map_count=262144
 A basic docker compose file that will set up Elasticsearch, Fluentd, and Kibana.
 
 Example
