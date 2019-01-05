@@ -1,0 +1,16 @@
+version: '2'
+services:
+  newrestapp:
+    image: opsmx11/restapp:indeedlog-1.0
+#    links:
+#      - "fluentd"
+    expose:
+      - 8080
+    ports:
+      - "8092:8080"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: demo.spark
+
